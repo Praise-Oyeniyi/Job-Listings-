@@ -1,0 +1,192 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    background: hsl(180, 52%, 96%);
+    font-family:'Spartan',Arial, Helvetica, sans-serif;
+}
+p{
+    font-size: 12px;
+}
+
+.bg-top{
+    position: absolute;
+    width:100%;
+    height:20vh;
+    top:0;
+    margin-bottom:5rem;
+    background:url('images/bg-header-desktop.svg')hsl(180, 29%, 50%) no-repeat center center;
+    background-size: cover;
+    left:0;
+    z-index:5;
+}
+.body{
+    top:25vh;
+    position: relative;
+    width: 75%;
+    margin: auto auto 5rem auto;
+    padding-bottom: 7rem;
+    color:hsl(180, 29%, 50%);
+    font-weight: 600;
+}
+#query{
+    width:90%;
+    margin: auto;
+    border:none;
+    border-radius: 3px;
+    position: relative;
+    top:-9vh;
+    height:80px;
+    z-index: 10;
+    cursor: pointer;
+    background: hsl(180, 31%, 96%);
+    box-shadow: 2px 5px 5px hsl(180, 31%, 85%);
+    padding: 10px 15px;
+    display: flex;
+    grid-gap:10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.clear{
+    z-index: 30;
+    text-decoration: underline;
+    color:hsl(180, 29%, 50%);
+    font-weight:700;
+}
+.filters{
+    display:flex;
+    grid-gap:15px;
+    text-overflow:scroll;
+    overflow:auto;
+    border-right: 1em solid transparent;
+}
+.boxesFrame{
+    transition:.2s ease-in;
+}
+.cross{
+    background: hsl(180, 29%, 50%);
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+}
+.filterValues:hover .cross{
+    background: hsl(180, 14%, 20%);
+}
+.filterValues{
+    width:100%;
+    display: flex;
+    height:25px;
+    background:hsl(180, 52%, 85%);
+    align-items: center;
+    border-radius:3px;
+}
+.filterValues p{
+    font-size:14px;
+    font-weight: 550;
+    padding:3px;
+}
+.filterValues img{
+    width:20px; 
+    padding:3px;
+}
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    background: hsl(180, 31%, 96%);
+    padding:25px;
+    box-shadow: 3px 7px 7px hsl(180, 31%, 85%);
+    margin-bottom:15px;
+    z-index: 5;
+    border-radius: 5px;
+}
+.boxes1{
+    border-left: 3px solid hsl(180, 29%, 50%);
+}
+img{
+    width:25%;
+    cursor: pointer;
+}
+.right p{
+    background:hsl(180, 52%, 85%);
+    padding: 2px;
+    border-radius: 3px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+.right p:hover{
+    color:hsl(180, 31%, 96%);
+    background: hsl(180, 29%, 50%);
+    transition: .3s ease-in;
+}
+.first,.role, .second, .right,.left{
+    display: flex;
+    grid-gap:10px;
+}
+
+.bio{
+    grid-gap:6px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: start;
+}
+.new, .featured{
+    padding:3px 5px;
+    font-size: 10px;
+    border-radius:10px;
+    color:hsl(180, 31%, 96%);
+}
+.new{
+    background:hsl(180, 29%, 50%) ;
+}
+.featured{
+    background:hsl(180, 14%, 20%);
+}
+.role{
+    color:hsl(180, 14%, 20%);
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.role:hover{
+    color:hsl(180, 29%, 50%);
+}
+.second p{
+    font-weight: 400;
+}
+
+
+@media(max-width:500px){
+    input::placeholder{
+        left:85%;
+    }
+    .body{
+        width:90%;
+    }
+    .boxes{
+        flex-direction: column;
+        grid-gap:20px;
+        padding-bottom:10px;
+    }
+    .left{
+        border-bottom: 1px solid hsl(180, 14%, 20%);
+        flex:1;
+        padding-bottom:15px;
+    }
+    .right{
+        width:100%;
+        flex:1;
+        overflow: auto;
+        text-overflow: scroll;
+        border-right: 1em solid transparent;
+        padding-bottom:.7em;
+    }
+}
